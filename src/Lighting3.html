@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lighting Sandbox</title>
+   
+  </head>
+
+  <body onload="main()">
+
+    <h1>Lighting Sandbox</h1>
+
+    <canvas id="webgl" width="800" height="600">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <div id="stats">
+      <p id="numdot">Performance: -- ms, -- fps</p>
+    </div>
+      
+
+        <div class="control-item">
+          <span class="key">W</span>
+          <span class="action"> forward</span>
+        </div>
+        <div class="control-item">
+          <span class="key">S</span>
+          <span class="action">backward</span>
+        </div>
+        <div class="control-item">
+          <span class="key">A</span>
+          <span class="action">left</span>
+        </div>
+        <div class="control-item">
+          <span class="key">D</span>
+          <span class="action">right</span>
+        </div>
+      </div>
+
+      
+        <div class="control-item">
+          <span class="key" id="normalOn">Normal On</span>
+        </div>
+        <div class="control-item">
+          <span class="key" id="normalOff">Normal Off</span>
+        </div>
+      </div>
+
+
+          <span class="key" id="lightOn">Light On</span>
+        </div>
+        <div class="control-item">
+          <span class="key" id="lightOff">Light Off</span>
+        </div>
+      </div>
+  
+      
+          <span class="label">X:</span>
+          <input type="range" id="lightSlideX" min="-100" max="100" value="0">
+        </div>
+        <div class="control-item">
+          <span class="label">Y:</span>
+          <input type="range" id="lightSlideY" min="-100" max="100" value="0">
+        </div>
+        <div class="control-item">
+          <span class="label">Z:</span>
+          <input type="range" id="lightSlideZ" min="-100" max="100" value="0">
+        </div>
+      </div>
+
+      
+          <span class="label">Red:</span>
+          <input type="range" id="lightColorR" min="0" max="100" value="100">
+        </div>
+        <div class="control-item">
+          <span class="label">Green:</span>
+          <input type="range" id="lightColorG" min="0" max="100" value="100">
+        </div>
+        <div class="control-item">
+          <span class="label">Blue:</span>
+          <input type="range" id="lightColorB" min="0" max="100" value="90">
+        </div>
+      </div>
+
+      
+        <div class="control-item">
+          <span class="label">X:</span>
+          <input type="range" id="spotlightDirX" min="-100" max="100" value="0">
+        </div>
+        <div class="control-item">
+          <span class="label">Y:</span>
+          <input type="range" id="spotlightDirY" min="-100" max="100" value="-100">
+        </div>
+        <div class="control-item">
+          <span class="label">Z:</span>
+          <input type="range" id="spotlightDirZ" min="-100" max="100" value="0">
+        </div>
+      </div>
+
+    
+          <span class="label">Angle:</span>
+          <input type="range" id="spotlightCutoff" min="0" max="100" value="0">
+        </div>
+      </div>
+
+      
+          <span class="key">Q</span>
+          <span class="action">Rotate camera left</span>
+        </div>
+        <div class="control-item">
+          <span class="key">E</span>
+          <span class="action">Rotate camera right</span>
+        </div>
+        <div class="control-item">
+          <span class="key">Mouse</span>
+          <span class="action">Use mouse to look around</span>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Loading Scripts -->
+
+    <!-- library files (WebGL) -->
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/webgl-utils.js"></script>
+
+    <!-- Project files -->
+    <script src="../src/Triangle.js"></script>
+    <script src="../src/Cube.js"></script>
+    <script src="../src/Camera.js"></script>
+    <script src="../src/Sphere.js"></script>
+
+    <!-- Main Lighting file -->
+    <script src="../src/World.js"></script>
+
+  </body>
+</html>
